@@ -1237,8 +1237,8 @@ static void bds_input_event(struct input_handle *handle, unsigned int type,
 
 static int input_dev_filter(const char *input_dev_name)
 {
-       if (strstr(input_dev_name, "touchscreen") || strstr(input_dev_name, "-k$
-               strstr(input_dev_name, "-nav") || strstr(input_dev_name, "-oj")$
+	if (strstr(input_dev_name, "touchscreen") || strstr(input_dev_name, "-keypad") ||
+		strstr(input_dev_name, "-nav") || strstr(input_dev_name, "-oj")) {
                return 0;
        } else {
                return 1;
